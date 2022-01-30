@@ -50,16 +50,16 @@ def factorial(n):
 3. Fibonacii Series
 
 ``` python
-def fibo(n):
+def fibonacii(n):
     if n == 0 or n == 1:
         return n
     
     else:
-        return fibo(n - 1) + fibo(n - 2) 
+        return fibonacii(n - 1) + fibonacii(n - 2) 
 
 ```
 
-- Fibonacci series of large numbers are hard to compute. Take for example: Computing fibo(120) gives 8,670,007,398,507,948,658,051,921 and if we assume each recursive call takes a nanosecond, it would take 250,000 years to finish. The reason why it takes lots of time to compute fibonacci series is that there are multiple similar recursive calls that are computed at every step.
+- Fibonacci series of large numbers are hard to compute. Take for example: Computing fibonacii(120) gives 8,670,007,398,507,948,658,051,921 and if we assume each recursive call takes a nanosecond, it would take 250,000 years to finish. The reason why it takes lots of time to compute fibonacci series is that there are multiple similar recursive calls that are computed at every step.
 
 
 ## Dynamic Programming
@@ -75,18 +75,18 @@ Lets solve the fibonacii series with Dynamic Programming.
 The only thing we do is to store the results of the similar recursive calls and reuse them everytime we face them rather than recomputing twice or thirdth or fourth.
 
 ```python
-def fibo_2(n, mimo = {}):
+def fibonacii(n, memo = {}):
     if n == 1 or n == 0:
         return n
     
     if n > 1:
-        if n in mimo:
-            return mimo[n]
+        if n in memo:
+            return memo[n]
         else:
-            result = fibo_2(n - 1, mimo) + fibo_2(n - 2, mimo)
-            mimo[n] = result
+            result = fibonacii(n - 1, memo) + fibonacii(n - 2, memo)
+            memo[n] = result
             return result
 
 ```
 
-The runtime of fibo_2(n) is O(n) since we are caching the results and there are only n values to pass to fibo_2(n). Looking the value in a dictionary takes O(1) constant time, so we don't count that. This also much better than O(2^n) of normal recursive function.
+The runtime of fibonacii(n) is O(n) since we are caching the results and there are only n values to pass to fibonacii(n). Looking the value in a dictionary takes O(1) constant time, so we don't count that. This also much better than O(2^n) of normal recursive function.
