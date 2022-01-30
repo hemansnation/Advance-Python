@@ -88,3 +88,5 @@ def fibo_2(n, mimo = {}):
             return result
 
 ```
+
+The runtime of fibo_2(n) is O(n) since we are caching the results and there are only n values to pass to fibo_2(n). Looking the value in a dictionary takes O(1) constant time, so we don't count that. This also much better than O(2^n) of normal recursive function.
