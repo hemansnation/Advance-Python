@@ -58,3 +58,5 @@ def fibo(n):
         return fibo(n - 1) + fibo(n - 2) 
 
 ```
+
+- Fibonacci series of large numbers are hard to compute. Take for example: Computing fibo(120) gives 8,670,007,398,507,948,658,051,921 and if we assume each recursive call takes a nanosecond, it would take 250,000 years to finish. The reason why it takes lots of time to compute fibonacci series is that there are multiple similar recursive calls that are computed at every step.
