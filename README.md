@@ -132,3 +132,41 @@ Follow style from PEP 8
 - Constants
     ALL_CAPS_WITH_UNDERSCORE
 
+#### Avoid one letter variables
+
+you can use them when the using short blocks
+
+```python
+for i in elements:
+    i.somthing()
+```
+
+Avoid redundant labeling
+
+#### Yes
+```python
+import audio
+
+core = audio.Core()
+controller = audio.Controller()
+```
+
+#### No
+```python
+import audio
+
+core = audio.AudioCore()
+controller = audio.AudioController()
+```
+
+#### Prefer Reverse notaion
+
+```python
+elements = 
+elements_active = 
+elements_deducted = 
+
+```
+
+#### Avoid getter and setter methods
+
