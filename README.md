@@ -94,4 +94,41 @@ The runtime of fibonacii(n) is O(n) since we are caching the results and there a
 
 ## Functions are Objects
 
+```python
+
+```
+
+Nested Functions
+
+```python
+
+```
+
+
+A function can return another function
+
+```python
+
+```
+
+
+## Object Orientation
+
+
+## Best Practices
+
+Follow style from PEP 8
+
+#### Naming
+
+- Variable, functions, methods, packages, modules
+    lower_case_with_underscore
+- Classes and Exceptions
+    CapitalWords
+- Protected Methods and Internal Functions
+    _single_leading_underscore
+- Private Methods
+    __double_leading_underscore
+- Constants
+    ALL_CAPS_WITH_UNDERSCORE
 
